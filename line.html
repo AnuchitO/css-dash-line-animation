@@ -4,38 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      /* path flowing from right to left */
       .path-to-left {
         stroke-dasharray: 10; /* Shorter dashes */
         stroke-dashoffset: 0;
         stroke-width: 3; /* Thicker line */
-        animation: dash-left-to-right 2s linear infinite; /* Increased speed */
+        stroke: green;
+        animation: dash-to-left 2s linear infinite; /* Increased speed */
       }
 
-      @keyframes dash-left-to-right {
-        /* `from` the dashed line flowing from right to left */
+      @keyframes dash-to-left {
+        /* `to` the dashed line flowing from right to left */
         /* `40` SPEED Adjust to match the dash length */
-        from {
+        to {
           stroke-dashoffset: 40;
         }
       }
 
+      /* path flowing from left to right */
       .path-to-right {
         stroke-dasharray: 10; /* Shorter dashes */
         stroke-dashoffset: 0;
         stroke-width: 3; /* Thicker line */
-        animation: dash-right-to-left 2s linear infinite; /* Increased speed */
+        stroke: red;
+        animation: dash-to-right 2s linear infinite; /* Increased speed */
       }
 
-      @keyframes dash-right-to-left {
-        /* `to` the dashed line flowing from right to left */
-        to {
-          stroke-dashoffset: 40; /* SPEED Adjust to match the dash length */
-        }
+      @keyframes dash-to-right {
         /* `from` the dashed line flowing from left to right */
         /* `40` SPEED Adjust to match the dash length */
-        /* from {
-          stroke-dashoffset: 40;
-        } */
+        from {
+          stroke-dashoffset: 40; /* SPEED Adjust to match the dash length */
+        }
       }
     </style>
   </head>
