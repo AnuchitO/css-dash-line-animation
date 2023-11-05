@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .path {
+        stroke-dasharray: 40; /* Adjust the dash length as needed */
+        stroke-dashoffset: 0;
+        animation: dash 5s linear infinite;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 40; /* Adjust the dash length here as well */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        class="path"
+        fill="none"
+        stroke="black"
+        d="M10,80 C50,10 200,10 280,80"
+      />
+    </svg>
+  </body>
+</html>

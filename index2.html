@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .path {
+        stroke-dasharray: 10; /* Shorter dashes */
+        stroke-dashoffset: 0;
+        stroke-width: 3; /* Thicker line */
+        animation: dash 2s linear infinite; /* Increased speed */
+      }
+
+      @keyframes dash {
+        /* `to` the dashed line flowing from right to left */
+        to {
+          stroke-dashoffset: 40; /* SPEED Adjust to match the dash length */
+        }
+        /* `from` the dashed line flowing from left to right */
+        /* `40` SPEED Adjust to match the dash length */
+        /* from {
+          stroke-dashoffset: 40;
+        } */
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        class="path"
+        fill="none"
+        stroke="black"
+        d="M10,80 C50,10 200,10 280,80"
+      />
+    </svg>
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        class="path"
+        fill="none"
+        stroke="black"
+        d="M10,80 C50,10 200,10 280,80"
+      />
+    </svg>
+  </body>
+</html>
