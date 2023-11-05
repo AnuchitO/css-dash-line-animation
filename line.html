@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      .path {
+      .path-to-left {
         stroke-dasharray: 10; /* Shorter dashes */
         stroke-dashoffset: 0;
         stroke-width: 3; /* Thicker line */
-        animation: dash 2s linear infinite; /* Increased speed */
+        animation: dash-left-to-right 2s linear infinite; /* Increased speed */
       }
 
-      @keyframes dash {
+      @keyframes dash-left-to-right {
+        /* `from` the dashed line flowing from right to left */
+        /* `40` SPEED Adjust to match the dash length */
+        from {
+          stroke-dashoffset: 40;
+        }
+      }
+
+      .path-to-right {
+        stroke-dasharray: 10; /* Shorter dashes */
+        stroke-dashoffset: 0;
+        stroke-width: 3; /* Thicker line */
+        animation: dash-right-to-left 2s linear infinite; /* Increased speed */
+      }
+
+      @keyframes dash-right-to-left {
         /* `to` the dashed line flowing from right to left */
         to {
           stroke-dashoffset: 40; /* SPEED Adjust to match the dash length */
@@ -27,7 +42,7 @@
   <body>
     <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
       <path
-        class="path"
+        class="path-to-left"
         fill="none"
         stroke="black"
         d="M10,80 C50,10 200,10 280,80"
@@ -35,7 +50,15 @@
     </svg>
     <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
       <path
-        class="path"
+        class="path-to-right"
+        fill="none"
+        stroke="black"
+        d="M10,80 C50,10 200,10 280,80"
+      />
+    </svg>
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <path
+        class="path-from-middle"
         fill="none"
         stroke="black"
         d="M10,80 C50,10 200,10 280,80"
